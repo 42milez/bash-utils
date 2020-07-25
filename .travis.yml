@@ -1,0 +1,14 @@
+language: minimal
+matrix:
+  include:
+    - dist: bionic
+install:
+  # Install bats
+  - sudo add-apt-repository -y ppa:duggan/bats
+  - sudo apt-get update
+  - sudo apt-get install -y bats
+script:
+  - bats test/
+notifications:
+  slack:
+    secure: "TVWodSz+8iqd5OTRn2eI1C1CFlkAPXn7j6csxG62UQBgiug9mTh4dzcJZSU00Ag7S1mp+Q6rNCP52Re+YM/0CFbwVxKENZOHpGHo6/p85h4LrLz0yD8khm8Sa3MwQLv+cZL0piBlUQ5HrWWxvxKSQbod/6HQDQ+4PT1nliVZvFJAM5ccpHFXQNqlJIbB0qPyfS+QtA8MqlImjlC+8Q8tT2QmN9gilWeTUoEhZ7KaZJkarQi2ONXyZU6RqEiwYh067Q9CQB5V/EbKUpaxn790bfV92JSKSdfudHfwrJBlcbUWMVmsMqYv9QyvFU/0XDI7DJaV7pf/bLnE/017S7eKgcQeT3L1505IWqKnr9X0QxuGXb9icj03TrwZ7BtYP5z/GwyKolNTI6vYV/5CRKhL370nUwoXIntIrSJxkf4QC285Ex70G85HCzNgG2EsWI3++IYjJFDyG6lyKzSWQIDG3zAfK7rI9a9pfTzL4n2+VNag3uhixNlRwv7KZ7a2Z8bvfHOmzc3gDdaSeEwziguGFnZvSU6DxtSFB//pIWq3umQSFEkn4z2Id46kqgr7/3jnJ/Dgbczxmer1FepTXsDHDsAIG55C7UgFcTaTx8pRWm5+4R97JCChMueHvZaqyfg8iB7uF04DUyqGCmts9/7NFQchFmqVid2FyjyoIA/bzD8="
